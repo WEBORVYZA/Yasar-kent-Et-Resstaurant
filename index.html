@@ -1,0 +1,2557 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#a91524">
+<title>Yaşarkent Et Restaurant | Menü</title>
+
+<style>
+:root{
+    --red:#a91524;
+    --red2:#c51d2e;
+    --dark:#151515;
+    --dark2:#202020;
+    --cream:#faf8f5;
+    --white:#fff;
+    --text:#1d1d1d;
+    --muted:#747474;
+    --border:#e9e5e0;
+    --green:#16834b;
+    --gold:#c69a4b;
+    --shadow:0 18px 50px rgba(0,0,0,.08);
+    --radius:20px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    background:var(--cream);
+    color:var(--text);
+}
+
+button,input{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* TOP */
+
+.top{
+    height:38px;
+    background:var(--dark);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    letter-spacing:.2px;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+    max-width:1250px;
+    min-height:78px;
+    padding:12px 22px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.brand-logo{
+    width:49px;
+    height:49px;
+    border-radius:15px;
+    background:var(--red);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    box-shadow:0 8px 22px rgba(169,21,36,.22);
+}
+
+.brand h1{
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:-.6px;
+}
+
+.brand p{
+    color:#888;
+    font-size:11px;
+    margin-top:2px;
+}
+
+.header-buttons{
+    display:flex;
+    gap:9px;
+    align-items:center;
+}
+
+.header-btn{
+    padding:11px 15px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    background:#fff;
+    font-weight:700;
+}
+
+.order-btn{
+    border:0;
+    padding:12px 17px;
+    border-radius:12px;
+    background:var(--red);
+    color:#fff;
+    font-weight:850;
+    box-shadow:0 8px 20px rgba(169,21,36,.2);
+}
+
+/* HERO */
+
+.hero{
+    min-height:430px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    color:#fff;
+    background:
+        linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.45),rgba(0,0,0,.15)),
+        url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=2000&q=90")
+        center/cover;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(0deg,rgba(0,0,0,.35),transparent 60%);
+}
+
+.hero-inner{
+    width:100%;
+    max-width:1250px;
+    margin:auto;
+    padding:75px 22px;
+    position:relative;
+    z-index:2;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.open{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border-radius:30px;
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.22);
+    backdrop-filter:blur(10px);
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:19px;
+}
+
+.open-dot{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#38d878;
+}
+
+.hero h2{
+    font-size:clamp(42px,6vw,72px);
+    line-height:.96;
+    letter-spacing:-3px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:590px;
+    color:#e5e5e5;
+    line-height:1.7;
+    font-size:16px;
+}
+
+.hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:11px;
+    margin-top:28px;
+}
+
+.hero-main,
+.hero-alt{
+    border-radius:13px;
+    padding:14px 20px;
+    font-weight:850;
+}
+
+.hero-main{
+    border:0;
+    color:#fff;
+    background:var(--red);
+}
+
+.hero-alt{
+    color:#fff;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.3);
+}
+
+/* INFO */
+
+.info-wrap{
+    max-width:1160px;
+    padding:0 20px;
+    margin:-42px auto 38px;
+    position:relative;
+    z-index:5;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.info{
+    padding:21px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border-right:1px solid var(--border);
+}
+
+.info:last-child{
+    border-right:0;
+}
+
+.info-icon{
+    width:44px;
+    height:44px;
+    flex:0 0 44px;
+    border-radius:13px;
+    background:#fff0f1;
+    color:var(--red);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:19px;
+}
+
+.info small{
+    display:block;
+    color:#999;
+    font-size:11px;
+    margin-bottom:3px;
+}
+
+.info strong{
+    display:block;
+    font-size:13px;
+}
+
+/* MAIN */
+
+main{
+    max-width:1160px;
+    margin:auto;
+    padding:0 20px 80px;
+}
+
+/* SEARCH */
+
+.search-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.search-box input{
+    width:100%;
+    height:58px;
+    border:1px solid #ddd;
+    background:#fff;
+    border-radius:16px;
+    padding:0 22px 0 52px;
+    outline:none;
+    font-size:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.03);
+}
+
+.search-box input:focus{
+    border-color:var(--red);
+    box-shadow:0 0 0 4px rgba(169,21,36,.08);
+}
+
+.search-icon{
+    position:absolute;
+    left:19px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:21px;
+    color:#777;
+}
+
+/* CATEGORIES */
+
+.categories{
+    position:sticky;
+    top:78px;
+    z-index:100;
+    margin:0 -20px 38px;
+    padding:12px 20px;
+    background:rgba(250,248,245,.96);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+}
+
+.category-scroll{
+    max-width:1120px;
+    margin:auto;
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.category-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.category{
+    flex:0 0 auto;
+    border:1px solid #ddd;
+    background:#fff;
+    color:#555;
+    border-radius:30px;
+    padding:10px 16px;
+    font-size:13px;
+    font-weight:750;
+    transition:.2s;
+}
+
+.category:hover{
+    border-color:var(--red);
+    color:var(--red);
+}
+
+.category.active{
+    background:var(--dark);
+    border-color:var(--dark);
+    color:#fff;
+}
+
+/* SECTION */
+
+.section{
+    margin-bottom:58px;
+    scroll-margin-top:145px;
+}
+
+.section-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.section-title{
+    font-size:30px;
+    letter-spacing:-1px;
+}
+
+.section-desc{
+    color:#888;
+    font-size:13px;
+    margin-top:6px;
+}
+
+.count{
+    color:#999;
+    font-size:12px;
+}
+
+/* POPULAR */
+
+.popular-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:17px;
+}
+
+.popular-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.popular-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.popular-card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    display:block;
+}
+
+.popular-content{
+    padding:17px;
+}
+
+.product-title{
+    font-size:17px;
+    font-weight:850;
+}
+
+.description{
+    color:#777;
+    font-size:13px;
+    line-height:1.55;
+    margin:7px 0 14px;
+}
+
+.price-line{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.price{
+    color:var(--green);
+    font-weight:900;
+    font-size:18px;
+}
+
+.old{
+    color:#999;
+    text-decoration:line-through;
+    font-size:12px;
+}
+
+.hot{
+    color:var(--red);
+    font-size:11px;
+    font-weight:850;
+    margin-top:10px;
+}
+
+/* PRODUCT GRID */
+
+.products{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.card{
+    display:flex;
+    min-height:170px;
+    padding:15px;
+    gap:18px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:17px;
+    cursor:pointer;
+    transition:.22s;
+}
+
+.card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+}
+
+.card-info{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+}
+
+.card h3{
+    font-size:16px;
+    line-height:1.3;
+    margin-bottom:7px;
+}
+
+.card p{
+    color:#777;
+    font-size:12.5px;
+    line-height:1.55;
+}
+
+.card-bottom{
+    margin-top:auto;
+    padding-top:14px;
+}
+
+.card-image{
+    width:145px;
+    height:140px;
+    flex:0 0 145px;
+    object-fit:cover;
+    border-radius:13px;
+    background:#f1efec;
+}
+
+/* EMPTY */
+
+.no-result{
+    display:none;
+    text-align:center;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:17px;
+    padding:40px 20px;
+    color:#777;
+}
+
+/* ABOUT */
+
+.about{
+    background:var(--dark);
+    color:#fff;
+    border-radius:25px;
+    padding:42px;
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:40px;
+    margin-top:20px;
+}
+
+.about h2{
+    font-size:31px;
+    letter-spacing:-1px;
+    margin-bottom:14px;
+}
+
+.about p{
+    color:#c9c9c9;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.about-list{
+    display:grid;
+    gap:10px;
+}
+
+.about-item{
+    background:#282828;
+    border-radius:13px;
+    padding:15px;
+    color:#ddd;
+    font-size:13px;
+}
+
+/* CONTACT */
+
+.contact{
+    margin-top:65px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.contact-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:25px;
+}
+
+.contact-card h3{
+    margin-bottom:18px;
+    font-size:19px;
+}
+
+.contact-row{
+    display:flex;
+    gap:13px;
+    padding:14px 0;
+    border-bottom:1px solid #eee;
+}
+
+.contact-row:last-child{
+    border-bottom:0;
+}
+
+.contact-icon{
+    width:41px;
+    height:41px;
+    flex:0 0 41px;
+    border-radius:12px;
+    background:#fff0f1;
+    color:var(--red);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-row small{
+    color:#999;
+    display:block;
+    margin-bottom:4px;
+    font-size:11px;
+}
+
+.contact-row strong{
+    font-size:14px;
+}
+
+.map{
+    min-height:100%;
+    min-height:330px;
+    border-radius:20px;
+    overflow:hidden;
+    background:
+        linear-gradient(rgba(255,255,255,.78),rgba(255,255,255,.78)),
+        url("https://tile.openstreetmap.org/16/37984/25254.png");
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:9px;
+    text-align:center;
+    border:1px solid var(--border);
+}
+
+.map-pin{
+    font-size:45px;
+}
+
+.map strong{
+    font-size:18px;
+}
+
+.map span{
+    color:#777;
+    font-size:12px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:#fff;
+    padding:45px 20px 25px;
+}
+
+.footer-inner{
+    max-width:1160px;
+    margin:auto;
+}
+
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    padding-bottom:25px;
+    border-bottom:1px solid #303030;
+}
+
+.footer-name{
+    font-weight:900;
+    font-size:20px;
+}
+
+.footer-sub{
+    color:#888;
+    font-size:12px;
+    margin-top:6px;
+}
+
+.footer-links{
+    display:flex;
+    gap:18px;
+    align-items:center;
+}
+
+.footer-links a{
+    color:#aaa;
+    font-size:13px;
+}
+
+.copyright{
+    text-align:center;
+    color:#666;
+    font-size:11px;
+    padding-top:22px;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:5000;
+    background:rgba(0,0,0,.7);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    width:min(650px,100%);
+    max-height:92vh;
+    overflow:auto;
+    background:#fff;
+    border-radius:23px;
+    position:relative;
+}
+
+.modal-img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+}
+
+.close{
+    position:absolute;
+    top:14px;
+    right:14px;
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:rgba(0,0,0,.65);
+    color:#fff;
+    font-size:22px;
+}
+
+.modal-content{
+    padding:25px;
+}
+
+.modal-content h2{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.modal-content p{
+    color:#777;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.modal-price{
+    margin-top:18px;
+    font-size:23px;
+    color:var(--green);
+    font-weight:900;
+}
+
+.modal-order{
+    display:inline-flex;
+    margin-top:22px;
+    background:var(--red);
+    color:#fff;
+    padding:13px 18px;
+    border-radius:12px;
+    font-weight:850;
+}
+
+/* TOP BUTTON */
+
+.to-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:47px;
+    height:47px;
+    border:0;
+    border-radius:50%;
+    background:var(--dark);
+    color:#fff;
+    font-size:18px;
+    display:none;
+    z-index:1000;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.to-top.show{
+    display:block;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .info:nth-child(2){
+        border-right:0;
+    }
+
+    .info:nth-child(-n+2){
+        border-bottom:1px solid var(--border);
+    }
+
+    .popular-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:700px){
+
+    .top{
+        font-size:10px;
+    }
+
+    .header-inner{
+        min-height:68px;
+        padding:10px 14px;
+    }
+
+    .brand-logo{
+        width:42px;
+        height:42px;
+        font-size:20px;
+    }
+
+    .brand h1{
+        font-size:16px;
+    }
+
+    .brand p{
+        display:none;
+    }
+
+    .header-btn{
+        display:none;
+    }
+
+    .order-btn{
+        padding:10px 12px;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:490px;
+    }
+
+    .hero-inner{
+        padding:55px 20px;
+    }
+
+    .hero h2{
+        font-size:47px;
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+    }
+
+    .hero-main,
+    .hero-alt{
+        width:100%;
+    }
+
+    .info-wrap{
+        padding:0 12px;
+        margin-top:-25px;
+    }
+
+    .info{
+        padding:15px 11px;
+    }
+
+    .info-icon{
+        width:36px;
+        height:36px;
+        flex-basis:36px;
+        font-size:16px;
+    }
+
+    .info strong{
+        font-size:11px;
+    }
+
+    main{
+        padding:0 14px 60px;
+    }
+
+    .categories{
+        top:68px;
+        margin-left:-14px;
+        margin-right:-14px;
+        padding:10px 14px;
+    }
+
+    .popular-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .popular-card img{
+        height:145px;
+    }
+
+    .popular-content{
+        padding:12px;
+    }
+
+    .product-title{
+        font-size:14px;
+    }
+
+    .description{
+        font-size:11px;
+    }
+
+    .price{
+        font-size:15px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        min-height:145px;
+    }
+
+    .card-image{
+        width:115px;
+        height:115px;
+        flex-basis:115px;
+    }
+
+    .section-title{
+        font-size:24px;
+    }
+
+    .about{
+        padding:28px 20px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .map{
+        min-height:250px;
+    }
+
+    .footer-top{
+        flex-direction:column;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+    }
+}
+
+@media(max-width:420px){
+
+    .popular-grid{
+        grid-template-columns:1fr;
+    }
+
+    .popular-card img{
+        height:190px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+    Yaşarkent Et Restaurant • Kebap • Pide • Lahmacun • Izgara
+</div>
+
+<header>
+    <div class="header-inner">
+
+        <div class="brand">
+            <div class="brand-logo">🔥</div>
+
+            <div>
+                <h1>Yaşarkent Et Restaurant</h1>
+                <p>Kebap & Türk Mutfağı</p>
+            </div>
+        </div>
+
+        <div class="header-buttons">
+
+            <button
+                class="header-btn"
+                onclick="goTo('iletisim')">
+                📍 İletişim
+            </button>
+
+            <a
+                class="order-btn"
+                href="https://www.yemeksepeti.com/restaurant/pxqy/yasarkent-et-restaurant"
+                target="_blank"
+                rel="noopener">
+                🛵 Yemeksepeti
+            </a>
+
+        </div>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="hero-content">
+
+            <div class="open">
+                <span class="open-dot"></span>
+                Pazartesi – Cumartesi • 11:00 – 22:30
+            </div>
+
+            <h2>
+                Gerçek et,<br>
+                gerçek lezzet.
+            </h2>
+
+            <p>
+                Yaşarkent Et Restaurant'ın güncel menüsünü
+                keşfedin. Kebap, pide, lahmacun, ızgara,
+                tatlı ve içecek seçeneklerini inceleyin.
+            </p>
+
+            <div class="hero-actions">
+
+                <button
+                    class="hero-main"
+                    onclick="goTo('menu')">
+                    🍽️ Menüyü İncele
+                </button>
+
+                <a
+                    class="hero-alt"
+                    href="https://www.yemeksepeti.com/restaurant/pxqy/yasarkent-et-restaurant"
+                    target="_blank"
+                    rel="noopener">
+                    🛵 Yemeksepeti'nden Sipariş
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="info-wrap">
+
+    <div class="info-grid">
+
+        <div class="info">
+            <div class="info-icon">🕐</div>
+            <div>
+                <small>Çalışma Saatleri</small>
+                <strong>11:00 – 22:30</strong>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">📍</div>
+            <div>
+                <small>Adres</small>
+                <strong>Kemalpaşa / İzmir</strong>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">☎️</div>
+            <div>
+                <small>Telefon</small>
+                <strong>0232 878 80 81</strong>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">🛵</div>
+            <div>
+                <small>Online Sipariş</small>
+                <strong>Yemeksepeti</strong>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<main id="menu">
+
+    <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input
+            id="search"
+            type="search"
+            placeholder="Menüde ara... örn. Adana, Pide, Ayran">
+    </div>
+
+
+    <nav class="categories">
+
+        <div class="category-scroll">
+
+            <button class="category active" data-filter="all">
+                Tümü
+            </button>
+
+            <button class="category" data-filter="corbalar">
+                Çorbalar
+            </button>
+
+            <button class="category" data-filter="firin">
+                Fırın Ürünleri
+            </button>
+
+            <button class="category" data-filter="kebap">
+                Kebaplar & Izgaralar
+            </button>
+
+            <button class="category" data-filter="kiremit">
+                Kiremitte
+            </button>
+
+            <button class="category" data-filter="durum">
+                Dürümler
+            </button>
+
+            <button class="category" data-filter="salata">
+                Salatalar
+            </button>
+
+            <button class="category" data-filter="tatli">
+                Tatlılar
+            </button>
+
+            <button class="category" data-filter="icecek">
+                İçecekler
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section class="section">
+
+        <div class="section-head">
+
+            <div>
+                <h2 class="section-title">Popüler</h2>
+                <p class="section-desc">
+                    En çok tercih edilen ürünler
+                </p>
+            </div>
+
+            <span class="count">6 ürün</span>
+
+        </div>
+
+        <div
+            class="popular-grid"
+            id="popularGrid">
+        </div>
+
+    </section>
+
+
+    <div id="menuContainer"></div>
+
+    <div
+        class="no-result"
+        id="noResult">
+        <div style="font-size:40px;margin-bottom:10px;">🔎</div>
+        <strong>Ürün bulunamadı</strong>
+        <p style="margin-top:6px;">
+            Arama kelimesini değiştirerek tekrar deneyin.
+        </p>
+    </div>
+
+
+    <section class="about">
+
+        <div>
+            <h2>Yaşarkent Et Restaurant</h2>
+
+            <p>
+                Geleneksel Türk mutfağından kebap, pide,
+                lahmacun ve ızgara çeşitlerinin yanı sıra
+                çorba, salata, tatlı ve içecek seçenekleriyle
+                hizmet veren restoran.
+            </p>
+        </div>
+
+        <div class="about-list">
+
+            <div class="about-item">
+                ✓ Kebap & ızgara çeşitleri
+            </div>
+
+            <div class="about-item">
+                ✓ Fırın ürünleri
+            </div>
+
+            <div class="about-item">
+                ✓ Günlük çorba seçenekleri
+            </div>
+
+            <div class="about-item">
+                ✓ Tatlı ve içecek seçenekleri
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="contact"
+        id="iletisim">
+
+        <div class="section-head">
+
+            <div>
+                <h2 class="section-title">
+                    İletişim
+                </h2>
+
+                <p class="section-desc">
+                    Restoranımıza ulaşın
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>Restoran Bilgileri</h3>
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">📍</div>
+
+                    <div>
+                        <small>Adres</small>
+                        <strong>
+                            Sekiz Eylül, 96. Sk No:3,
+                            35730 Kemalpaşa / İzmir
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">☎️</div>
+
+                    <div>
+                        <small>Telefon</small>
+
+                        <strong>
+                            <a href="tel:+902328788081">
+                                0232 878 80 81
+                            </a>
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">🕐</div>
+
+                    <div>
+                        <small>Çalışma Saatleri</small>
+
+                        <strong>
+                            Pazartesi – Cumartesi<br>
+                            11:00 – 22:30
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">🛵</div>
+
+                    <div>
+                        <small>Online Sipariş</small>
+
+                        <strong>
+                            Yemeksepeti üzerinden
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="map">
+
+                <div class="map-pin">📍</div>
+
+                <strong>
+                    Yaşarkent Et Restaurant
+                </strong>
+
+                <span>
+                    Sekiz Eylül, 96. Sk No:3<br>
+                    Kemalpaşa / İzmir
+                </span>
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Yaşarkent%20Et%20Restaurant%20Kemalpaşa%20İzmir"
+                    target="_blank"
+                    rel="noopener"
+                    style="
+                        margin-top:8px;
+                        padding:10px 15px;
+                        border-radius:10px;
+                        background:#151515;
+                        color:#fff;
+                        font-size:12px;
+                        font-weight:800;
+                    ">
+                    📍 Haritada Aç
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-top">
+
+            <div>
+                <div class="footer-name">
+                    Yaşarkent Et Restaurant
+                </div>
+
+                <div class="footer-sub">
+                    Kebap • Pide • Lahmacun • Izgara
+                </div>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#menu">
+                    Menü
+                </a>
+
+                <a href="#iletisim">
+                    İletişim
+                </a>
+
+                <a
+                    href="https://www.yemeksepeti.com/restaurant/pxqy/yasarkent-et-restaurant"
+                    target="_blank"
+                    rel="noopener">
+                    Yemeksepeti
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Yaşarkent Et Restaurant
+        </div>
+
+    </div>
+
+</footer>
+
+
+<div
+    class="modal"
+    id="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal()">
+            ×
+        </button>
+
+        <img
+            class="modal-img"
+            id="modalImg"
+            src=""
+            alt="">
+
+        <div class="modal-content">
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDescription"></p>
+
+            <div
+                class="modal-price"
+                id="modalPrice">
+            </div>
+
+            <a
+                class="modal-order"
+                href="https://www.yemeksepeti.com/restaurant/pxqy/yasarkent-et-restaurant"
+                target="_blank"
+                rel="noopener">
+                🛵 Yemeksepeti'nden Sipariş Ver
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<button
+    class="to-top"
+    id="topButton"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    ↑
+</button>
+
+
+<script>
+
+const yemeksepeti =
+"https://www.yemeksepeti.com/restaurant/pxqy/yasarkent-et-restaurant";
+
+
+const images = {
+
+    lahmacun:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161731.jpg?height=600&width=600",
+
+    kiymaliPide:
+    "https://images.deliveryhero.io/image/fd-tr/products/68161607.jpg?height=600&width=600",
+
+    kiymaliYumurtali:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161615.jpg?height=600&width=600",
+
+    kiymaliKasari:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161656.jpg?height=600&width=600",
+
+    kasariPide:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161631.jpg?height=600&width=600",
+
+    kasariYumurtali:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161656.jpg?height=600&width=600",
+
+    kusbasili:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161677.jpg?height=600&width=600",
+
+    kusbasiliKasari:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161705.jpg?height=600&width=600",
+
+    kasariLahmacun:
+    "https://images.deliveryhero.io/image/fd-tr/products/68766936.jpg?height=600&width=600",
+
+    karisikPide:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68488378.jpg?height=600&width=600",
+
+    adana:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161744.jpg?height=600&width=600",
+
+    kofte:
+    "https://images.deliveryhero.io/image/fd-tr/products/68161758.jpg?height=600&width=600",
+
+    kuzu:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161740.jpg?height=600&width=600",
+
+    steak:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68477691.jpg?height=600&width=600",
+
+    pirzola:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161740.jpg?height=600&width=600",
+
+    antrikot:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68488378.jpg?height=600&width=600",
+
+    durum:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68585306.jpg?height=600&width=600",
+
+    kiremit:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68490363.jpg?height=600&width=600",
+
+    kiremitKasari:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68766879.jpg?height=600&width=600",
+
+    kiremitKofte:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68766782.jpg?height=600&width=600",
+
+    kiremitKusbas:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68766792.jpg?height=600&width=600",
+
+    salata:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68766889.jpg?height=600&width=600",
+
+    kemalpasa:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68777550.jpg?height=600&width=600",
+
+    sutlac:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68777567.jpg?height=600&width=600",
+
+    cola:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161832.jpg?height=600&width=600",
+
+    fanta:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161836.jpg?height=600&width=600",
+
+    ayran:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68504287.jpg?height=600&width=600",
+
+    salgam:
+    "https://images.deliveryhero.io/image/fd-tr/products/68161841.jpg?height=600&width=600",
+
+    water:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68490848.jpg?height=600&width=600",
+
+    cola1l:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68503310.jpg?height=600&width=600",
+
+    ayran1l:
+    "https://images.deliveryhero.io/image/fd-tr/products/68766930.jpg?height=600&width=600",
+
+    soda:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68766898.jpg?height=600&width=600",
+
+    fanta1l:
+    "https://images.deliveryhero.io/image/fd-tr/Products/72173911.jpg?height=600&width=600",
+
+    soup:
+    "https://images.deliveryhero.io/image/fd-tr/Products/68161825.jpg?height=600&width=600"
+};
+
+
+const menu = [
+
+{
+    category:"corbalar",
+    categoryName:"Çorbalar",
+    name:"İşkembe Çorbası",
+    price:"204 TL",
+    old:"240 TL",
+    desc:"Ekmek ile.",
+    image:images.soup
+},
+
+{
+    category:"corbalar",
+    categoryName:"Çorbalar",
+    name:"Ezogelin Çorbası",
+    price:"153 TL",
+    old:"180 TL",
+    desc:"Ekmek ile.",
+    image:images.soup
+},
+
+{
+    category:"corbalar",
+    categoryName:"Çorbalar",
+    name:"Mercimek Çorbası",
+    price:"153 TL",
+    old:"180 TL",
+    desc:"Ekmek ile.",
+    image:images.soup
+},
+
+{
+    category:"corbalar",
+    categoryName:"Çorbalar",
+    name:"Kelle Paça Çorbası",
+    price:"204 TL",
+    old:"240 TL",
+    desc:"Ekmek ile.",
+    popular:true,
+    image:images.soup
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"Kıymalı Pide",
+    price:"187 TL",
+    old:"220 TL",
+    desc:"Salata ile.",
+    popular:true,
+    image:images.kiymaliPide
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"Kıymalı Yumurtalı Pide",
+    price:"195,50 TL",
+    old:"230 TL",
+    desc:"Salata ile.",
+    image:images.kiymaliYumurtali
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"Kıymalı Kaşarlı Pide",
+    price:"229,50 TL",
+    old:"270 TL",
+    desc:"Salata ile.",
+    popular:true,
+    image:images.kiymaliKasari
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"Kaşarlı Pide",
+    price:"229,50 TL",
+    old:"270 TL",
+    desc:"Salata ile.",
+    image:images.kasariPide
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"Kaşarlı Yumurtalı Pide",
+    price:"246,50 TL",
+    old:"290 TL",
+    desc:"Salata ile.",
+    image:images.kasariYumurtali
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"Kuşbaşılı Pide",
+    price:"289 TL",
+    old:"340 TL",
+    desc:"Salata ile.",
+    image:images.kusbasili
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"Kuşbaşılı Kaşarlı Pide",
+    price:"306 TL",
+    old:"360 TL",
+    desc:"Salata ile.",
+    image:images.kusbasiliKasari
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"Lahmacun",
+    price:"170 TL",
+    old:"200 TL",
+    desc:"Salata ile.",
+    popular:true,
+    image:images.lahmacun
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"Kaşarlı Lahmacun",
+    price:"187 TL",
+    old:"220 TL",
+    desc:"Salata ile.",
+    image:images.kasariLahmacun
+},
+
+{
+    category:"firin",
+    categoryName:"Fırın Ürünleri",
+    name:"KARIŞIK PİDE",
+    price:"289 TL",
+    old:"340 TL",
+    desc:"Salata ile.",
+    image:images.karisikPide
+},
+
+{
+    category:"kebap",
+    categoryName:"Kebaplar & Izgaralar",
+    name:"Kuzu Pirzola",
+    price:"595 TL",
+    old:"700 TL",
+    desc:"Bulgur pilavı, salata ile.",
+    image:images.pirzola
+},
+
+{
+    category:"kebap",
+    categoryName:"Kebaplar & Izgaralar",
+    name:"Adana Kebap",
+    price:"425 TL",
+    old:"500 TL",
+    desc:"Bulgur pilavı, salata ile.",
+    popular:true,
+    image:images.adana
+},
+
+{
+    category:"kebap",
+    categoryName:"Kebaplar & Izgaralar",
+    name:"Urfa Kebap",
+    price:"425 TL",
+    old:"500 TL",
+    desc:"Bulgur pilavı, salata ile.",
+    image:images.adana
+},
+
+{
+    category:"kebap",
+    categoryName:"Kebaplar & Izgaralar",
+    name:"Izgara Köfte",
+    price:"425 TL",
+    old:"500 TL",
+    desc:"Bulgur pilavı, salata ile.",
+    popular:true,
+    image:images.kofte
+},
+
+{
+    category:"kebap",
+    categoryName:"Kebaplar & Izgaralar",
+    name:"Dana Bonfile",
+    price:"765 TL",
+    old:"900 TL",
+    desc:"Bulgur pilavı, salata ile.",
+    image:images.steak
+},
+
+{
+    category:"kebap",
+    categoryName:"Kebaplar & Izgaralar",
+    name:"Dana Antrikot",
+    price:"595 TL",
+    old:"700 TL",
+    desc:"Bulgur pilavı, salata ile.",
+    image:images.antrikot
+},
+
+{
+    category:"kebap",
+    categoryName:"Kebaplar & Izgaralar",
+    name:"Kuzu Şiş",
+    price:"595 TL",
+    old:"700 TL",
+    desc:"Bulgur pilavı, salata ile.",
+    image:images.kuzu
+},
+
+{
+    category:"kebap",
+    categoryName:"Kebaplar & Izgaralar",
+    name:"Kuzu Külbastı",
+    price:"595 TL",
+    old:"700 TL",
+    desc:"Bulgur pilavı, salata ile.",
+    image:images.kuzu
+},
+
+{
+    category:"kebap",
+    categoryName:"Kebaplar & Izgaralar",
+    name:"URFA DÜRÜM",
+    price:"255 TL",
+    old:"300 TL",
+    desc:"Urfa kebabın, lavaşın içine konularak hazırlandığı dürüm çeşididir.",
+    image:images.durum
+},
+
+{
+    category:"kiremit",
+    categoryName:"Kiremitte Ürünler",
+    name:"Kiremitte Köfte",
+    price:"425 TL",
+    old:"500 TL",
+    desc:"Salata ile.",
+    image:images.kiremit
+},
+
+{
+    category:"kiremit",
+    categoryName:"Kiremitte Ürünler",
+    name:"Kiremitte Kaşarlı Kuşbaşı",
+    price:"595 TL",
+    old:"700 TL",
+    desc:"Salata ile.",
+    image:images.kiremitKasari
+},
+
+{
+    category:"kiremit",
+    categoryName:"Kiremitte Ürünler",
+    name:"KİREMİTTE KAŞARLI KÖFTE",
+    price:"510 TL",
+    old:"600 TL",
+    desc:"Salata ile.",
+    image:images.kiremitKofte
+},
+
+{
+    category:"kiremit",
+    categoryName:"Kiremitte Ürünler",
+    name:"Kiremitte Kuşbaşı",
+    price:"510 TL",
+    old:"600 TL",
+    desc:"Salata ile.",
+    image:images.kiremitKusbas
+},
+
+{
+    category:"durum",
+    categoryName:"Dürümler",
+    name:"Adana Dürüm",
+    price:"297,50 TL",
+    old:"350 TL",
+    desc:"Adana kebabın, lavaşın içine konularak hazırlandığı dürüm çeşididir.",
+    popular:true,
+    image:images.durum
+},
+
+{
+    category:"salata",
+    categoryName:"Salatalar",
+    name:"ÇOBAN SALATASI",
+    price:"127,50 TL",
+    old:"150 TL",
+    desc:"Sebzeler, zeytinyağı, limon suyu ve baharatlarla hazırlanan bir salata çeşididir.",
+    image:images.salata
+},
+
+{
+    category:"tatli",
+    categoryName:"Tatlılar",
+    name:"Kemalpaşa Tatlısı",
+    price:"127,50 TL",
+    old:"150 TL",
+    desc:"Tek kişilik.",
+    image:images.kemalpasa
+},
+
+{
+    category:"tatli",
+    categoryName:"Tatlılar",
+    name:"Fırın Sütlaç",
+    price:"127,50 TL",
+    old:"150 TL",
+    desc:"Tek kişilik.",
+    image:images.sutlac
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Coca-Cola (33 cl.)",
+    price:"68 TL",
+    old:"80 TL",
+    desc:"Kutu içecek.",
+    image:images.cola
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Fanta (33 cl.)",
+    price:"68 TL",
+    old:"80 TL",
+    desc:"Kutu içecek.",
+    image:images.fanta
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Ayran (20 cl.)",
+    price:"34 TL",
+    old:"40 TL",
+    desc:"Küçük boy.",
+    image:images.ayran
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Şalgam Suyu (33 cl.)",
+    price:"68 TL",
+    old:"80 TL",
+    desc:"Pet şişe.",
+    image:images.salgam
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Su (50 cl.)",
+    price:"25,50 TL",
+    old:"30 TL",
+    desc:"Pet şişe.",
+    image:images.water
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Coca-Cola (1 L.)",
+    price:"170 TL",
+    old:"200 TL",
+    desc:"Pet şişe.",
+    image:images.cola1l
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Ayran (30 cl.)",
+    price:"42,50 TL",
+    old:"50 TL",
+    desc:"Büyük boy.",
+    image:images.ayran
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Maden Suyu (20 cl.)",
+    price:"25,50 TL",
+    old:"30 TL",
+    desc:"İçecek.",
+    image:images.soda
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Ayran (1 L.)",
+    price:"170 TL",
+    old:"200 TL",
+    desc:"Pet şişe.",
+    image:images.ayran1l
+},
+
+{
+    category:"icecek",
+    categoryName:"İçecekler",
+    name:"Fanta (1 L.)",
+    price:"170 TL",
+    old:"200 TL",
+    desc:"Pet şişe.",
+    image:images.fanta1l
+}
+];
+
+
+/* POPÜLER */
+
+const popularNames = [
+    "Lahmacun",
+    "Kıymalı Pide",
+    "Izgara Köfte",
+    "Kelle Paça Çorbası",
+    "Adana Dürüm",
+    "Kıymalı Kaşarlı Pide"
+];
+
+const popularGrid =
+document.getElementById("popularGrid");
+
+
+menu.filter(item =>
+    popularNames.includes(item.name)
+).forEach(item => {
+
+    const card =
+    document.createElement("article");
+
+    card.className =
+    "popular-card searchable-card";
+
+    card.dataset.category =
+    item.category;
+
+    card.dataset.name =
+    item.name.toLocaleLowerCase("tr-TR");
+
+    card.innerHTML = `
+
+        <img
+            src="${item.image}"
+            alt="${item.name}"
+            loading="lazy">
+
+        <div class="popular-content">
+
+            <div class="product-title">
+                ${item.name}
+            </div>
+
+            <div class="description">
+                ${item.desc}
+            </div>
+
+            <div class="price-line">
+
+                <span class="price">
+                    ${item.price}
+                </span>
+
+                <span class="old">
+                    ${item.old}
+                </span>
+
+            </div>
+
+            <div class="hot">
+                🔥 Popüler
+            </div>
+
+        </div>
+    `;
+
+    card.addEventListener("click",() =>
+        openProduct(item)
+    );
+
+    popularGrid.appendChild(card);
+});
+
+
+/* MENÜ KATEGORİLERİ */
+
+const categoryOrder = [
+    "corbalar",
+    "firin",
+    "kebap",
+    "kiremit",
+    "durum",
+    "salata",
+    "tatli",
+    "icecek"
+];
+
+
+const categoryTitles = {
+    corbalar:"Çorbalar",
+    firin:"Fırın Ürünleri",
+    kebap:"Kebaplar & Izgaralar",
+    kiremit:"Kiremitte Ürünler",
+    durum:"Dürümler",
+    salata:"Salatalar",
+    tatli:"Tatlılar",
+    icecek:"İçecekler"
+};
+
+
+const categoryDescriptions = {
+    corbalar:"Sıcak çorba seçenekleri",
+    firin:"Fırından sıcak çıkan pide ve lahmacun çeşitleri",
+    kebap:"Kebap ve ızgara seçenekleri",
+    kiremit:"Özel kiremit sunumları",
+    durum:"Lavaş içerisinde hazırlanan dürümler",
+    salata:"Taze salata seçenekleri",
+    tatli:"Tatlı seçenekleri",
+    icecek:"Soğuk ve ferahlatıcı içecekler"
+};
+
+
+const container =
+document.getElementById("menuContainer");
+
+
+categoryOrder.forEach(category => {
+
+    const items =
+    menu.filter(item =>
+        item.category === category
+    );
+
+    const section =
+    document.createElement("section");
+
+    section.className =
+    "section menu-section";
+
+    section.dataset.category =
+    category;
+
+    section.id =
+    category;
+
+    section.innerHTML = `
+
+        <div class="section-head">
+
+            <div>
+
+                <h2 class="section-title">
+                    ${categoryTitles[category]}
+                </h2>
+
+                <p class="section-desc">
+                    ${categoryDescriptions[category]}
+                </p>
+
+            </div>
+
+            <span class="count">
+                ${items.length} ürün
+            </span>
+
+        </div>
+
+        <div class="products"></div>
+    `;
+
+    const grid =
+    section.querySelector(".products");
+
+    items.forEach(item => {
+
+        const card =
+        document.createElement("article");
+
+        card.className =
+        "card searchable-card";
+
+        card.dataset.category =
+        item.category;
+
+        card.dataset.name =
+        item.name.toLocaleLowerCase("tr-TR");
+
+        card.innerHTML = `
+
+            <div class="card-info">
+
+                <h3>
+                    ${item.name}
+                </h3>
+
+                <p>
+                    ${item.desc}
+                </p>
+
+                <div class="card-bottom">
+
+                    <div class="price-line">
+
+                        <span class="price">
+                            ${item.price}
+                        </span>
+
+                        <span class="old">
+                            ${item.old}
+                        </span>
+
+                    </div>
+
+                    ${
+                        item.popular
+                        ? `<div class="hot">🔥 Popüler</div>`
+                        : ""
+                    }
+
+                </div>
+
+            </div>
+
+            <img
+                class="card-image"
+                src="${item.image}"
+                alt="${item.name}"
+                loading="lazy">
+        `;
+
+        card.addEventListener("click",() =>
+            openProduct(item)
+        );
+
+        grid.appendChild(card);
+
+    });
+
+    container.appendChild(section);
+});
+
+
+/* FİLTRE */
+
+const categoryButtons =
+document.querySelectorAll(".category");
+
+
+categoryButtons.forEach(button => {
+
+    button.addEventListener("click",() => {
+
+        categoryButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        const filter =
+        button.dataset.filter;
+
+        document.querySelectorAll(".menu-section")
+        .forEach(section => {
+
+            section.style.display =
+            filter === "all" ||
+            section.dataset.category === filter
+            ? ""
+            : "none";
+
+        });
+
+        document.getElementById("popularGrid")
+        .parentElement.style.display =
+        filter === "all" ? "" : "none";
+
+        if(filter !== "all"){
+
+            const target =
+            document.querySelector(
+                `.menu-section[data-category="${filter}"]`
+            );
+
+            if(target){
+
+                setTimeout(() => {
+
+                    target.scrollIntoView({
+                        behavior:"smooth",
+                        block:"start"
+                    });
+
+                },60);
+
+            }
+
+        }
+
+    });
+
+});
+
+
+/* ARAMA */
+
+const search =
+document.getElementById("search");
+
+const noResult =
+document.getElementById("noResult");
+
+
+search.addEventListener("input",function(){
+
+    const query =
+    this.value
+    .toLocaleLowerCase("tr-TR")
+    .trim();
+
+    document.querySelectorAll(".menu-section")
+    .forEach(section => {
+
+        let visible = 0;
+
+        section
+        .querySelectorAll(".searchable-card")
+        .forEach(card => {
+
+            const name =
+            card.dataset.name;
+
+            if(!query || name.includes(query)){
+
+                card.style.display = "";
+                visible++;
+
+            }else{
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+        section.style.display =
+        visible > 0 ? "" : "none";
+
+    });
+
+
+    let popularVisible = 0;
+
+    document.querySelectorAll(
+        "#popularGrid .searchable-card"
+    ).forEach(card => {
+
+        if(
+            !query ||
+            card.dataset.name.includes(query)
+        ){
+
+            card.style.display = "";
+            popularVisible++;
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    document.getElementById("popularGrid")
+    .parentElement.style.display =
+    popularVisible > 0 ? "" : "none";
+
+
+    noResult.style.display =
+    (
+        document.querySelectorAll(
+            ".searchable-card:not([style*='display: none'])"
+        ).length === 0
+    )
+    ? "block"
+    : "none";
+
+});
+
+
+/* MODAL */
+
+const modal =
+document.getElementById("modal");
+
+const modalImg =
+document.getElementById("modalImg");
+
+const modalTitle =
+document.getElementById("modalTitle");
+
+const modalDescription =
+document.getElementById("modalDescription");
+
+const modalPrice =
+document.getElementById("modalPrice");
+
+
+function openProduct(item){
+
+    modalImg.src =
+    item.image;
+
+    modalImg.alt =
+    item.name;
+
+    modalTitle.textContent =
+    item.name;
+
+    modalDescription.textContent =
+    item.desc;
+
+    modalPrice.innerHTML = `
+        ${item.price}
+        <span style="
+            color:#999;
+            font-size:13px;
+            text-decoration:line-through;
+            margin-left:8px;
+        ">
+            ${item.old}
+        </span>
+    `;
+
+    modal.classList.add("show");
+
+    document.body.style.overflow =
+    "hidden";
+}
+
+
+function closeModal(){
+
+    modal.classList.remove("show");
+
+    document.body.style.overflow =
+    "";
+
+}
+
+
+modal.addEventListener("click",e => {
+
+    if(e.target === modal){
+        closeModal();
+    }
+
+});
+
+
+document.addEventListener("keydown",e => {
+
+    if(e.key === "Escape"){
+        closeModal();
+    }
+
+});
+
+
+/* SCROLL */
+
+function goTo(id){
+
+    const element =
+    document.getElementById(id);
+
+    if(!element) return;
+
+    element.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    });
+
+}
+
+
+/* TOP */
+
+const topButton =
+document.getElementById("topButton");
+
+window.addEventListener("scroll",() => {
+
+    if(window.scrollY > 500){
+
+        topButton.classList.add("show");
+
+    }else{
+
+        topButton.classList.remove("show");
+
+    }
+
+});
+
+
+/* GÖRSEL HATA KORUMASI */
+
+document.addEventListener("error",function(e){
+
+    if(e.target.tagName === "IMG"){
+
+        e.target.src =
+        "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=85";
+
+    }
+
+},true);
+
+</script>
+
+</body>
+</html>
+```1
